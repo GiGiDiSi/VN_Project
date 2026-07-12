@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cknc16lfuucsw"]
+
+[ext_resource type="Texture2D" uid="uid://bvl0cfeop570w" path="res://Assets/VFX/Sprites/Th155Koishi.png" id="1_ay717"]
+
+[node name="Char" type="Node2D" unique_id=510386704]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1533769128]
+texture = ExtResource("1_ay717")

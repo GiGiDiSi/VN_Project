@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bjpvc42kklp6b"]
+
+[ext_resource type="Texture2D" uid="uid://d4gppdpp01j8k" path="res://Assets/VFX/Background_Elements/BG_Placeholder.jpg" id="1_1ul2p"]
+[ext_resource type="PackedScene" uid="uid://cknc16lfuucsw" path="res://Scenes/char.tscn" id="2_a4gao"]
+[ext_resource type="PackedScene" uid="uid://cm3vmxl5l36qn" path="res://Scenes/Dialogue_UI.tscn" id="2_y3fsw"]
+
+[node name="Node2D" type="Node2D" unique_id=604378196]
+
+[node name="bgLayer" type="CanvasLayer" parent="." unique_id=1527324919]
+layer = -1
+follow_viewport_enabled = true
+
+[node name="Background" type="TextureRect" parent="bgLayer" unique_id=1631803558]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_1ul2p")
+
+[node name="CharLayer" type="CanvasLayer" parent="." unique_id=732993120]
+
+[node name="Control" type="Control" parent="CharLayer" unique_id=1393168717]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Dialogue_UI" parent="CharLayer/Control" unique_id=2088684839 instance=ExtResource("2_y3fsw")]
+layout_mode = 0
+offset_left = 583.0
+offset_top = 209.0
+offset_right = 832.00006
+offset_bottom = 320.0
+
+[node name="Char" parent="CharLayer/Control" unique_id=510386704 instance=ExtResource("2_a4gao")]
+position = Vector2(414, 380)

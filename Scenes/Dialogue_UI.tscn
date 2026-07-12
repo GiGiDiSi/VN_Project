@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://cm3vmxl5l36qn"]
+
+[ext_resource type="Script" uid="uid://5uu868mxl1n6" path="res://Scripts/dialogue_ui.gd" id="1_gblr7"]
+[ext_resource type="Texture2D" uid="uid://b758vs83qrhed" path="res://Assets/VFX/Interface/Speech_Bubble.png" id="2_gblr7"]
+
+[node name="Dialogue_UI" type="MarginContainer" unique_id=2088684839]
+offset_right = 249.0
+offset_bottom = 111.0
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+script = ExtResource("1_gblr7")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1755782141]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("2_gblr7")
+region_rect = Rect2(0, 0, 48, 48)
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=827781616]
+layout_mode = 2
+
+[node name="Name_Con" type="MarginContainer" parent="VBoxContainer" unique_id=1614204618]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="CharacterName" type="Label" parent="VBoxContainer/Name_Con" unique_id=1768026420]
+layout_mode = 2
+text = "Koishi Komeiji"
+
+[node name="Dialogue_Con" type="MarginContainer" parent="VBoxContainer" unique_id=1298876083]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Dialogue" type="Label" parent="VBoxContainer/Dialogue_Con" unique_id=1775190335]
+layout_mode = 2
+text = "6 7"
+horizontal_alignment = 1
+
+[node name="LetterRenderer" type="Timer" parent="." unique_id=870786188]
+
+[connection signal="timeout" from="LetterRenderer" to="." method="_on_letter_renderer_timeout"]
