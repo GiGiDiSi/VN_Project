@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="DialogicStyle" format=3 uid="uid://ievpyvflh1vf"]
+
+[ext_resource type="Resource" uid="uid://ctisn2mh8kuk" path="res://Scenes/Style.tres" id="1_cqivj"]
+[ext_resource type="Script" uid="uid://bwg6yncmh2cml" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="1_p6mdf"]
+[ext_resource type="Script" uid="uid://dv08k6ljua6fm" path="res://addons/dialogic/Resources/dialogic_style.gd" id="2_cqivj"]
+
+[sub_resource type="Resource" id="Resource_bejqq"]
+script = ExtResource("1_p6mdf")
+
+[sub_resource type="Resource" id="Resource_emd2l"]
+script = ExtResource("1_p6mdf")
+
+[sub_resource type="Resource" id="Resource_4erkn"]
+script = ExtResource("1_p6mdf")
+
+[sub_resource type="Resource" id="Resource_xg7jr"]
+script = ExtResource("1_p6mdf")
+
+[sub_resource type="Resource" id="Resource_6rmir"]
+script = ExtResource("1_p6mdf")
+
+[sub_resource type="Resource" id="Resource_axxl8"]
+script = ExtResource("1_p6mdf")
+
+[sub_resource type="Resource" id="Resource_si8cj"]
+script = ExtResource("1_p6mdf")
+
+[sub_resource type="Resource" id="Resource_yorfd"]
+script = ExtResource("1_p6mdf")
+
+[sub_resource type="Resource" id="Resource_rnkoc"]
+script = ExtResource("1_p6mdf")
+
+[resource]
+script = ExtResource("2_cqivj")
+name = "Custom_textbox"
+inherits = ExtResource("1_cqivj")
+layer_list = Array[String](["10", "11", "12", "13", "14", "15", "16", "17"])
+layer_info = {
+"": SubResource("Resource_bejqq"),
+"10": SubResource("Resource_emd2l"),
+"11": SubResource("Resource_4erkn"),
+"12": SubResource("Resource_xg7jr"),
+"13": SubResource("Resource_6rmir"),
+"14": SubResource("Resource_axxl8"),
+"15": SubResource("Resource_si8cj"),
+"16": SubResource("Resource_yorfd"),
+"17": SubResource("Resource_rnkoc")
+}

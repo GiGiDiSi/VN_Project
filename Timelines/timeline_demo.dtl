@@ -1,2 +1,16 @@
-Do you want $1--
-or $2??
+join Koishi center
+Koishi: Hello??
+Koishi: OHH HII!!!
+Koishi: How are you??
+label Answer
+[text_input text="What to say:" var="Response"]
+if {Response} == "Alright":
+	Koishi: Ohhh okay
+elif {Response} == "Awful":
+	Koishi: man--
+elif {Response} == "...":
+	Koishi: huh??
+	[wait time="1.0"]
+	jump Answer
+Koishi: Anyways--
+Koishi: 6 7

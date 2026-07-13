@@ -17,16 +17,26 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-DialogueManager="*uid://claae1cm6fm4m"
 Dialogic="*uid://ds2q0uclmolvu"
 
 [dialogic]
 
-directories/dch_directory={}
+directories/dch_directory={
+"Koishi": "res://Characters/Koishi.dch"
+}
 directories/dtl_directory={
 "timeline_demo": "res://Timelines/timeline_demo.dtl"
 }
-layout/style_directory={}
+layout/style_directory={
+"": "res://Assets/VFX/Interface/Temp_VN_UI/Style2.tres",
+"Style2": "res://Assets/VFX/Interface/Temp_VN_UI/Style2.tres"
+}
+layout/style_list=["res://Assets/VFX/Interface/Temp_VN_UI/Style2.tres"]
+layout/default_style="res://Assets/VFX/Interface/Temp_VN_UI/Style2.tres"
+variables={
+"Response": "",
+"Responses": {}
+}
 
 [display]
 
