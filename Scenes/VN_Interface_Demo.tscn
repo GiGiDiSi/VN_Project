@@ -30,7 +30,7 @@ offset_bottom = 40.0
 layout_mode = 0
 offset_left = 583.0
 offset_top = 209.0
-offset_right = 832.00006
+offset_right = 827.0
 offset_bottom = 320.0
 
 [node name="Char" parent="CharLayer/Control" unique_id=510386704 instance=ExtResource("2_a4gao")]
