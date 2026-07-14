@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="VN-Project"
-run/main_scene="uid://bjpvc42kklp6b"
+run/main_scene="res://Scenes/MainMenu.tscn"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 

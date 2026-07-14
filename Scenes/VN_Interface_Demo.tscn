@@ -23,4 +23,5 @@ texture = ExtResource("1_1ul2p")
 visible = false
 
 [node name="Char" parent="CharLayer" unique_id=510386704 instance=ExtResource("2_a4gao")]
+visible = false
 position = Vector2(414, 380)
