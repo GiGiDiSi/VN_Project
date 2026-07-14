@@ -25,3 +25,5 @@ visible = false
 [node name="Char" parent="CharLayer" unique_id=510386704 instance=ExtResource("2_a4gao")]
 visible = false
 position = Vector2(414, 380)
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=802294625]

@@ -27,8 +27,9 @@ scene = ExtResource("4_syldh")
 script = ExtResource("2_x0ian")
 scene = ExtResource("5_r2mje")
 overrides = {
-"box_distance": "475.0",
-"box_size": "Vector2(1000, 160)"
+"box_distance": "1000.0",
+"box_size": "Vector2(1800, 200)",
+"text_custom_size": "30.0"
 }
 
 [sub_resource type="Resource" id="Resource_r2mje"]
