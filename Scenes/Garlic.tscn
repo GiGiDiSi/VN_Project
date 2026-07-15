@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://de8avsetudvvj"]
+
+[ext_resource type="PackedScene" uid="uid://c302cerjp4j12" path="res://Scenes/ingredient.tscn" id="1_k2gsh"]
+
+[node name="Garlic" unique_id=876298712 instance=ExtResource("1_k2gsh")]
+ingredient_name = "Garlic"
+chopped = true

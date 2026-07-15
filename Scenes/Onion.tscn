@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dt1gfcvqdsnoa"]
+
+[ext_resource type="PackedScene" uid="uid://c302cerjp4j12" path="res://Scenes/ingredient.tscn" id="1_l4ub0"]
+
+[node name="Onion" unique_id=876298712 instance=ExtResource("1_l4ub0")]
+ingredient_name = "Onion"
+base_color = Color(0.89899254, 0.48597646, 1, 1)
+chopped = true
