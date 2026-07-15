@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://be1q3budrhueb"]
+
+[ext_resource type="PackedScene" uid="uid://de8avsetudvvj" path="res://Scenes/Garlic.tscn" id="1_eauim"]
+[ext_resource type="PackedScene" uid="uid://da84hql4end8t" path="res://Scenes/Ginger.tscn" id="2_htxe4"]
+[ext_resource type="PackedScene" uid="uid://c302cerjp4j12" path="res://Scenes/ingredient.tscn" id="3_3kqfv"]
+[ext_resource type="PackedScene" uid="uid://dt1gfcvqdsnoa" path="res://Scenes/Onion.tscn" id="4_3gvcw"]
+[ext_resource type="PackedScene" uid="uid://clrmcneqhgh38" path="res://Scenes/Pot.tscn" id="5_vorf6"]
+
+[node name="PotTransition" type="Node2D" unique_id=647084641]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=633918439]
+
+[node name="Pot" parent="CanvasLayer" unique_id=962496976 instance=ExtResource("5_vorf6")]
+position = Vector2(974, 946)
+
+[node name="Ingredient" parent="CanvasLayer" unique_id=1856015744 instance=ExtResource("3_3kqfv")]
+position = Vector2(548, 1087)
+chopped = true
+
+[node name="Garlic" parent="CanvasLayer" unique_id=876298712 instance=ExtResource("1_eauim")]
+position = Vector2(629, 837)
+base_color = Color(0.9, 0.9, 0.9, 1)
+
+[node name="Ginger" parent="CanvasLayer" unique_id=310194607 instance=ExtResource("2_htxe4")]
+position = Vector2(1309, 1062)
+
+[node name="Onion" parent="CanvasLayer" unique_id=2033776019 instance=ExtResource("4_3gvcw")]
+position = Vector2(1366, 804)
