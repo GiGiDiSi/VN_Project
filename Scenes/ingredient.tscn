@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c302cerjp4j12"]
 
 [ext_resource type="Script" uid="uid://d3hugu3oxygkx" path="res://Scripts/Ingredient.gd" id="1_2hfw8"]
+[ext_resource type="Script" uid="uid://xa7lxdqotb3p" path="res://Scripts/ingredient.gd" id="1_2hfw8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rq4os"]
 size = Vector2(196, 146)
@@ -17,6 +18,7 @@ position = Vector2(-1, -2)
 shape = SubResource("RectangleShape2D_rq4os")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1849076579]
+visible = false
 custom_minimum_size = Vector2(200, 150)
 anchors_preset = 8
 anchor_left = 0.5

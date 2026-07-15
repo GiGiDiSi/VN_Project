@@ -14,7 +14,6 @@ position = Vector2(526, 788)
 
 [node name="Chopping_Board" parent="CanvasLayer" unique_id=1235135713 instance=ExtResource("3_417gw")]
 position = Vector2(930, 724)
-script = null
 
 [node name="Ingredient" parent="CanvasLayer" unique_id=876298712 instance=ExtResource("1_jlbca")]
 position = Vector2(1326, 845)
