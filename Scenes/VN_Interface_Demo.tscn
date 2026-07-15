@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bjpvc42kklp6b"]
+
+[ext_resource type="Texture2D" uid="uid://d4gppdpp01j8k" path="res://Assets/VFX/Background_Elements/BG_Placeholder.jpg" id="1_1ul2p"]
+[ext_resource type="Script" uid="uid://ds4ssgawrqnqd" path="res://Scenes/vn_interface_demo.gd" id="1_1311e"]
+[ext_resource type="PackedScene" uid="uid://cknc16lfuucsw" path="res://Scenes/char.tscn" id="2_a4gao"]
+
+[node name="Node2D" type="Node2D" unique_id=604378196]
+script = ExtResource("1_1311e")
+
+[node name="bgLayer" type="CanvasLayer" parent="." unique_id=1527324919]
+layer = -1
+follow_viewport_enabled = true
+
+[node name="Background" type="TextureRect" parent="bgLayer" unique_id=1631803558]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_1ul2p")
+
+[node name="CharLayer" type="CanvasLayer" parent="." unique_id=732993120]
+visible = false
+
+[node name="Char" parent="CharLayer" unique_id=510386704 instance=ExtResource("2_a4gao")]
+visible = false
+position = Vector2(414, 380)
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=802294625]
