@@ -28,11 +28,11 @@ directories/dtl_directory={
 "timeline_demo": "res://Timelines/timeline_demo.dtl"
 }
 layout/style_directory={
-"": "res://Assets/VFX/Interface/Temp_VN_UI/Style2.tres",
-"Style2": "res://Assets/VFX/Interface/Temp_VN_UI/Style2.tres"
+"": "res://Assets/VFX/Interface/TextboxWithPortrait/Style.tres",
+"Style": "res://Assets/VFX/Interface/TextboxWithPortrait/Style.tres"
 }
-layout/style_list=["res://Assets/VFX/Interface/Temp_VN_UI/Style2.tres"]
-layout/default_style="res://Assets/VFX/Interface/Temp_VN_UI/Style2.tres"
+layout/style_list=["res://Assets/VFX/Interface/TextboxWithPortrait/Style.tres"]
+layout/default_style="res://Assets/VFX/Interface/TextboxWithPortrait/Style.tres"
 variables={
 "Response": "",
 "Responses": {}

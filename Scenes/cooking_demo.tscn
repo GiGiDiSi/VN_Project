@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dgx3cymk2i1jy"]
+
+[ext_resource type="PackedScene" uid="uid://c302cerjp4j12" path="res://Scenes/ingredient.tscn" id="1_jlbca"]
+[ext_resource type="PackedScene" uid="uid://cgca2ej0gjr1r" path="res://Scenes/knife.tscn" id="2_384cl"]
+[ext_resource type="PackedScene" uid="uid://bpmqe43d05enx" path="res://Scenes/Chopping_Board.tscn" id="3_417gw"]
+
+[node name="Chopping_Demo" type="Node2D" unique_id=1977601905]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1501253852]
+
+[node name="Knife" parent="CanvasLayer" unique_id=1932644937 instance=ExtResource("2_384cl")]
+z_index = 1
+position = Vector2(526, 788)
+
+[node name="Chopping_Board" parent="CanvasLayer" unique_id=1235135713 instance=ExtResource("3_417gw")]
+position = Vector2(930, 724)
+
+[node name="Ingredient" parent="CanvasLayer" unique_id=876298712 instance=ExtResource("1_jlbca")]
+position = Vector2(1326, 845)

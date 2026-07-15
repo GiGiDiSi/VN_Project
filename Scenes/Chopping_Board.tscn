@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bpmqe43d05enx"]
+
+[ext_resource type="Script" uid="uid://dxvhumo2cdb36" path="res://Scripts/chopping_board.gd" id="1_py18t"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6h5q0"]
+
+[node name="Chopping_Board" type="Area2D" unique_id=1235135713]
+script = ExtResource("1_py18t")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1133421065]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=611307574]
+shape = SubResource("CircleShape2D_6h5q0")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1636608959]
+custom_minimum_size = Vector2(500, 500)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.5837287, 0.33043247, 0.16093433, 1)
