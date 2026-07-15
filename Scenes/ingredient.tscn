@@ -1,15 +1,12 @@
 [gd_scene format=3 uid="uid://c302cerjp4j12"]
 
-[ext_resource type="Script" uid="uid://d3hugu3oxygkx" path="res://Scripts/Ingredient.gd" id="1_2hfw8"]
-[ext_resource type="Script" uid="uid://xa7lxdqotb3p" path="res://Scripts/ingredient.gd" id="1_2hfw8"]
+[ext_resource type="Script" uid="uid://eiai8nbgxqsn" path="res://Scripts/Ingredient.gd" id="1_2hfw8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rq4os"]
 size = Vector2(196, 146)
 
 [node name="Ingredient" type="Area2D" unique_id=876298712]
 script = ExtResource("1_2hfw8")
-ingredient_name = "Beef"
-base_color = Color(1, 0.24000001, 0.25266647, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=438997873]
 

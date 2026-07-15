@@ -15,11 +15,9 @@ position = Vector2(974, 946)
 
 [node name="Ingredient" parent="CanvasLayer" unique_id=1856015744 instance=ExtResource("3_3kqfv")]
 position = Vector2(548, 1087)
-chopped = true
 
 [node name="Garlic" parent="CanvasLayer" unique_id=876298712 instance=ExtResource("1_eauim")]
 position = Vector2(629, 837)
-base_color = Color(0.9, 0.9, 0.9, 1)
 
 [node name="Ginger" parent="CanvasLayer" unique_id=310194607 instance=ExtResource("2_htxe4")]
 position = Vector2(1309, 1062)
