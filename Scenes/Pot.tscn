@@ -1,14 +1,18 @@
 [gd_scene format=3 uid="uid://clrmcneqhgh38"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_7n77a"]
-radius = 110.0
+[ext_resource type="Texture2D" uid="uid://u1n10x1dca0y" path="res://Assets/VFX/Karinderia/Karinderia_Pot.png" id="1_3rhbi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x1crf"]
+size = Vector2(615, 627)
 
 [node name="Pot" type="Area2D" unique_id=962496976]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=712983199]
-shape = SubResource("CircleShape2D_7n77a")
+position = Vector2(-27.5, -26.5)
+shape = SubResource("RectangleShape2D_x1crf")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1950296612]
+visible = false
 custom_minimum_size = Vector2(220, 220)
 anchors_preset = 8
 anchor_left = 0.5
@@ -23,3 +27,10 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1840432226]
+offset_left = -425.0
+offset_top = -384.0
+offset_right = 319.0
+offset_bottom = 284.0
+texture = ExtResource("1_3rhbi")

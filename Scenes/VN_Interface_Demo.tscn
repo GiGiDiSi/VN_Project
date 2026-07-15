@@ -1,29 +1,68 @@
 [gd_scene format=3 uid="uid://bjpvc42kklp6b"]
 
-[ext_resource type="Texture2D" uid="uid://d4gppdpp01j8k" path="res://Assets/VFX/Background_Elements/BG_Placeholder.jpg" id="1_1ul2p"]
-[ext_resource type="Script" uid="uid://ds4ssgawrqnqd" path="res://Scenes/vn_interface_demo.gd" id="1_1311e"]
+[ext_resource type="Script" uid="uid://82ck0stewm4q" path="res://Scenes/vn_interface_demo.gd" id="1_1311e"]
 [ext_resource type="PackedScene" uid="uid://cknc16lfuucsw" path="res://Scenes/char.tscn" id="2_a4gao"]
+[ext_resource type="Texture2D" uid="uid://grgc3xak6gmw" path="res://Assets/VFX/Karinderia/Karinderia_BG.png" id="2_y3fsw"]
+[ext_resource type="Texture2D" uid="uid://d23e4d0r64e1n" path="res://Assets/VFX/Karinderia/Karinderia_Table.png" id="4_1311e"]
+[ext_resource type="PackedScene" uid="uid://clrmcneqhgh38" path="res://Scenes/Pot.tscn" id="5_0j336"]
+[ext_resource type="PackedScene" uid="uid://bbsj2t31inlf7" path="res://Scenes/Calcu.tscn" id="6_0j336"]
 
 [node name="Node2D" type="Node2D" unique_id=604378196]
 script = ExtResource("1_1311e")
 
-[node name="bgLayer" type="CanvasLayer" parent="." unique_id=1527324919]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=697805109]
+follow_viewport_enabled = true
+
+[node name="bgLayer" type="CanvasLayer" parent="CanvasLayer" unique_id=1527324919]
 layer = -1
 follow_viewport_enabled = true
 
-[node name="Background" type="TextureRect" parent="bgLayer" unique_id=1631803558]
+[node name="Background" type="TextureRect" parent="CanvasLayer/bgLayer" unique_id=1631803558]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_1ul2p")
+texture = ExtResource("2_y3fsw")
+expand_mode = 3
+metadata/_edit_use_anchors_ = true
 
-[node name="CharLayer" type="CanvasLayer" parent="." unique_id=732993120]
+[node name="CharLayer" type="CanvasLayer" parent="CanvasLayer" unique_id=732993120]
 visible = false
 
-[node name="Char" parent="CharLayer" unique_id=510386704 instance=ExtResource("2_a4gao")]
+[node name="Char" parent="CanvasLayer/CharLayer" unique_id=510386704 instance=ExtResource("2_a4gao")]
 visible = false
 position = Vector2(414, 380)
 
-[node name="Polygon2D" type="Polygon2D" parent="." unique_id=802294625]
+[node name="Polygon2D" type="Polygon2D" parent="CanvasLayer" unique_id=802294625]
+visible = false
+
+[node name="TableLAyer" type="CanvasLayer" parent="CanvasLayer" unique_id=622940810]
+
+[node name="table" type="TextureRect" parent="CanvasLayer/TableLAyer" unique_id=1761843948]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -209.0
+offset_top = -612.0
+offset_right = 259.0
+offset_bottom = 198.0
+grow_horizontal = 2
+grow_vertical = 0
+offset_transform_enabled = true
+offset_transform_scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_1311e")
+metadata/_edit_use_anchors_ = true
+
+[node name="potlayer" type="CanvasLayer" parent="CanvasLayer" unique_id=573935407]
+
+[node name="Pot" parent="CanvasLayer/potlayer" unique_id=962496976 instance=ExtResource("5_0j336")]
+position = Vector2(1662, 992)
+scale = Vector2(0.8, 0.8)
+
+[node name="CalcuLayer" type="CanvasLayer" parent="CanvasLayer" unique_id=531172406]
+
+[node name="Calcu" parent="CanvasLayer/CalcuLayer" unique_id=1060332518 instance=ExtResource("6_0j336")]
+position = Vector2(265.00003, 1010.00006)
+scale = Vector2(0.8, 0.8)
