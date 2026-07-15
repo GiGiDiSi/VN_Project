@@ -9,7 +9,7 @@ func _ready() -> void:
 	input_pickable = true
 
 
-func _physics_process(delta: float) -> void:
+func _process(delta: float) -> void:
 	if dragging:
 		position = get_global_mouse_position() - of
 
