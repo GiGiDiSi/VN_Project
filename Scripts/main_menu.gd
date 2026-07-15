@@ -3,7 +3,6 @@ extends Control
 # TODO: Point this actual gameplay scene
 const GAME_SCENE_PATH := "res://Scenes/VN_Interface_Demo.tscn"
 
-
 func _on_new_game_button_pressed() -> void:
 	get_tree().change_scene_to_file(GAME_SCENE_PATH)
 	# TEST

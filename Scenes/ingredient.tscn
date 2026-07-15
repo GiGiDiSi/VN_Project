@@ -9,7 +9,6 @@ size = Vector2(196, 146)
 script = ExtResource("1_2hfw8")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=438997873]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1113701083]
 position = Vector2(-1, -2)
@@ -28,6 +27,7 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(0.90905744, 0.24889219, 0.26099646, 1)
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
