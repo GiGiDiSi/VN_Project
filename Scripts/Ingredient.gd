@@ -12,7 +12,6 @@ var is_on_chopping_board: bool = false
 
 func _ready() -> void:
 	area_entered.connect(_on_area_entered)
-	_generate_temp_textures() 
 	_update_visuals()
 
 func _on_area_entered(other_area: Area2D) -> void:
@@ -28,15 +27,20 @@ func _check_and_chop(other_area: Area2D) -> void:
 	if is_knife and current_state == State.WHOLE:
 		transition_to_state(State.CHOPPED)
 		print("Chopped")
+		get_node("/root/Chopping_Demo").ingredient_chopped()
 
 func _on_board_state_changed() -> void:
 	if is_on_chopping_board and current_state == State.WHOLE:
 		for overlapping_area in get_overlapping_areas():
 			_check_and_chop(overlapping_area)
+			
 
 func transition_to_state(new_state: State) -> void:
 	current_state = new_state
+	if not sprite_2d:
+		sprite_2d = get_node_or_null("Sprite2D")
 	_update_visuals()
+
 
 func _update_visuals() -> void:
 	if not sprite_2d:
@@ -47,15 +51,3 @@ func _update_visuals() -> void:
 			sprite_2d.texture = raw_texture
 		State.CHOPPED:
 			sprite_2d.texture = chopped_texture
-
-# Remove when there's actual textures
-func _generate_temp_textures() -> void:
-	if raw_texture == null:
-		var raw_image = Image.create(64, 64, false, Image.FORMAT_RGBA8)
-		raw_image.fill(Color.GREEN) 
-		raw_texture = ImageTexture.create_from_image(raw_image)
-		
-	if chopped_texture == null:
-		var chopped_image = Image.create(64, 64, false, Image.FORMAT_RGBA8)
-		chopped_image.fill(Color.RED) 
-		chopped_texture = ImageTexture.create_from_image(chopped_image)

@@ -1,19 +1,91 @@
 [gd_scene format=3 uid="uid://dgx3cymk2i1jy"]
 
+[ext_resource type="Script" uid="uid://dkv0c1lfubm71" path="res://Scenes/Chopping.gd" id="1_1do7e"]
+[ext_resource type="Texture2D" uid="uid://grgc3xak6gmw" path="res://Assets/VFX/Karinderia/Karinderia_BG.png" id="1_1v6dr"]
 [ext_resource type="PackedScene" uid="uid://c302cerjp4j12" path="res://Scenes/ingredient.tscn" id="1_jlbca"]
 [ext_resource type="PackedScene" uid="uid://cgca2ej0gjr1r" path="res://Scenes/knife.tscn" id="2_384cl"]
+[ext_resource type="Texture2D" uid="uid://d23e4d0r64e1n" path="res://Assets/VFX/Karinderia/Karinderia_Table.png" id="2_q12mi"]
 [ext_resource type="PackedScene" uid="uid://bpmqe43d05enx" path="res://Scenes/Chopping_Board.tscn" id="3_417gw"]
+[ext_resource type="Texture2D" uid="uid://cxg7b5g27v5mm" path="res://Assets/VFX/Kitchen/Beef_Whole.png" id="4_417gw"]
+[ext_resource type="Texture2D" uid="uid://bq3hubhagspdy" path="res://Assets/VFX/Kitchen/Beef_Chopped.png" id="5_43526"]
+[ext_resource type="PackedScene" uid="uid://de8avsetudvvj" path="res://Scenes/Garlic.tscn" id="8_eulto"]
+[ext_resource type="Texture2D" uid="uid://bsljrc2i4et7c" path="res://Assets/VFX/Kitchen/Garlic_Whole.png" id="9_1do7e"]
+[ext_resource type="Texture2D" uid="uid://clby55vqdjlqf" path="res://Assets/VFX/Kitchen/Garlic_Chopped.png" id="10_f5ygs"]
+[ext_resource type="PackedScene" uid="uid://da84hql4end8t" path="res://Scenes/Ginger.tscn" id="11_xllg0"]
+[ext_resource type="Texture2D" uid="uid://dl5m3kl5xrdmg" path="res://Assets/VFX/Kitchen/Ginger_Whole.png" id="12_4s28i"]
+[ext_resource type="Texture2D" uid="uid://bsbyjigwbl3xg" path="res://Assets/VFX/Kitchen/Ginger_Chopped.png" id="13_fvyb5"]
+[ext_resource type="PackedScene" uid="uid://dt1gfcvqdsnoa" path="res://Scenes/Onion.tscn" id="14_fa21n"]
+[ext_resource type="Texture2D" uid="uid://cy46o5xwtbosv" path="res://Assets/VFX/Kitchen/Onion_Whole.png" id="15_a4y78"]
+[ext_resource type="Texture2D" uid="uid://bij5kp2yj7ar" path="res://Assets/VFX/Kitchen/Onion_Chopped.png" id="16_h0po5"]
 
 [node name="Chopping_Demo" type="Node2D" unique_id=1977601905]
+script = ExtResource("1_1do7e")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1501253852]
 
-[node name="Knife" parent="CanvasLayer" unique_id=1932644937 instance=ExtResource("2_384cl")]
-z_index = 1
-position = Vector2(526, 788)
+[node name="bgLayer" type="CanvasLayer" parent="CanvasLayer" unique_id=511691732]
+layer = -2
+follow_viewport_enabled = true
+
+[node name="Background" type="TextureRect" parent="CanvasLayer/bgLayer" unique_id=899923427]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_1v6dr")
+expand_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="TableLAyer" type="CanvasLayer" parent="CanvasLayer" unique_id=824974299]
+layer = -1
+
+[node name="table" type="TextureRect" parent="CanvasLayer/TableLAyer" unique_id=957473048]
+anchors_preset = -1
+anchor_top = 0.97583336
+anchor_right = 1.025
+anchor_bottom = 1.0
+offset_left = -256.0
+offset_top = -597.0
+offset_right = 212.0
+offset_bottom = 213.0
+grow_horizontal = 2
+grow_vertical = 0
+offset_transform_enabled = true
+offset_transform_scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_q12mi")
+metadata/_edit_use_anchors_ = true
 
 [node name="Chopping_Board" parent="CanvasLayer" unique_id=1235135713 instance=ExtResource("3_417gw")]
-position = Vector2(930, 724)
+position = Vector2(1110, 1022)
+scale = Vector2(0.75, 0.75)
+
+[node name="Knife" parent="CanvasLayer" unique_id=1932644937 instance=ExtResource("2_384cl")]
+z_index = 1
+position = Vector2(103, 785)
+rotation = 1.5707964
+scale = Vector2(0.5, 0.5)
 
 [node name="Ingredient" parent="CanvasLayer" unique_id=876298712 instance=ExtResource("1_jlbca")]
-position = Vector2(1326, 845)
+position = Vector2(1804, 750)
+scale = Vector2(0.75, 0.75)
+raw_texture = ExtResource("4_417gw")
+chopped_texture = ExtResource("5_43526")
+
+[node name="Garlic" parent="CanvasLayer" unique_id=1288914913 instance=ExtResource("8_eulto")]
+position = Vector2(375, 719)
+scale = Vector2(0.75, 0.75)
+raw_texture = ExtResource("9_1do7e")
+chopped_texture = ExtResource("10_f5ygs")
+
+[node name="Ginger" parent="CanvasLayer" unique_id=1488823994 instance=ExtResource("11_xllg0")]
+position = Vector2(364, 922)
+scale = Vector2(0.75, 0.75)
+raw_texture = ExtResource("12_4s28i")
+chopped_texture = ExtResource("13_fvyb5")
+
+[node name="Onion" parent="CanvasLayer" unique_id=1064133332 instance=ExtResource("14_fa21n")]
+position = Vector2(682, 686)
+scale = Vector2(0.75, 0.75)
+raw_texture = ExtResource("15_a4y78")
+chopped_texture = ExtResource("16_h0po5")

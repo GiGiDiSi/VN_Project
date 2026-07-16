@@ -1,21 +1,23 @@
 [gd_scene format=3 uid="uid://cgca2ej0gjr1r"]
 
 [ext_resource type="Script" uid="uid://csj2adpmhm6cr" path="res://Scripts/knife.gd" id="1_rq4os"]
+[ext_resource type="Texture2D" uid="uid://cxt8vqt7voku0" path="res://Assets/VFX/Kitchen/Knife.png" id="2_k4pir"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rq4os"]
-size = Vector2(40, 196)
+size = Vector2(1108, 196)
 
 [node name="Knife" type="Area2D" unique_id=1932644937]
 script = ExtResource("1_rq4os")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=124858336]
-visible = false
+texture = ExtResource("2_k4pir")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1739888401]
-position = Vector2(0, -2)
+position = Vector2(4, -2)
 shape = SubResource("RectangleShape2D_rq4os")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1462563766]
+visible = false
 custom_minimum_size = Vector2(20, 200)
 anchors_preset = 8
 anchor_left = 0.5
